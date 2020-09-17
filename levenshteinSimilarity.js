@@ -37,18 +37,14 @@ const editDistance = (string1, string2) => {
 
 // Calculate similarity between 2 strings
 const similarity = (s1, s2) => {
-	let longer = s1;
-	let shorter = s2;
-
-	if (s1.length < s2.length) {
-		longer = s2;
-		shorter = s1;
-	}
+	const longer = s1.length <= s2.length ? s2 : s1;
+	const shorter = s1.length <= s2.length ? s1 : s2;
 
 	const longerLength = longer.length;
 
 	if (longerLength === 0) {
 		return 1.0;
 	}
+
 	return (longerLength - editDistance(longer, shorter)) / parseFloat(longerLength);
 };
