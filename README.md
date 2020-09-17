@@ -13,4 +13,4 @@ Utilities functions for JS with ES6 and functional programming
 - Sequencify promises
 - Sequencify promises with break on first error
 - Async sleep function
-- Levensthein similarity between strings
+- Levenshtein similarity between strings
