@@ -13,7 +13,7 @@ const flattenObject = (object) => Object.entries(object)
 				})
 				.reduce((acc, [k2, v2]) => ({ ...acc, [k2]: v2 }), {});
 
-			return formatEntry(tmpO);
+			return flattenObject(tmpO);
 		}
 
 		return { [k]: v };
