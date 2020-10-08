@@ -48,3 +48,8 @@ const similarity = (s1, s2) => {
 
 	return (longerLength - editDistance(longer, shorter)) / parseFloat(longerLength);
 };
+
+module.exports = {
+	editDistance,
+	similarity
+}

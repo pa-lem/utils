@@ -6,3 +6,9 @@ const mergeObject = (acc, obj) => ({ ...acc, ...obj });
 
 // Reduce array of arrays to array [ [ k, v ], [ k2, v2 ] ] => [ k, v, k2, v2 ]
 const mergeArray = (acc, elem) => [ ...acc, ...elem ];
+
+module.exports = {
+	reduceObject,
+	mergeObject,
+	mergeArray
+}

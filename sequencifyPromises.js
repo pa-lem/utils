@@ -8,3 +8,7 @@ const sequencifyPromises = async promises => promises.reduce(
 		)
 	), Promise.resolve([])
 );
+
+module.exports = {
+	sequencifyPromises
+}

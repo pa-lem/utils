@@ -12,3 +12,7 @@ const sequencifyPromisesWithBreak = async promises => promises
 	),
 	Promise.reject(new Error("First error"))
 );
+
+module.exports = {
+	sequencifyPromisesWithBreak
+}
