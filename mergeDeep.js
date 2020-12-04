@@ -14,7 +14,7 @@ const mergeDeep = (...objects) => objects.reduce((acc, obj) => {
 		const oVal = obj[k];
 
 		if (Array.isArray(pVal) && Array.isArray(oVal)) {
-			return { ...acc, [k]: [ ...pVal, ...oVal ] };
+			return { ...acc, [k]: Array.from(new Set([ ...pVal, ...oVal ])) };
 		} if (isObject(pVal) && isObject(oVal)) {
 			return { ...acc, [k]: mergeDeep(pVal, oVal) };
 		}
